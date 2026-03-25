@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khaled Walid | Operation Research Reports</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .document-viewer {
+        border: 1px solid #ccc;
+        padding: 20px;
+        max-height: 600px;
+        overflow-y: auto;
+        background: white;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+      .document-viewer h1, .document-viewer h2, .document-viewer h3 {
+        color: #2c3e50;
+        margin-top: 1rem;
+      }
+      .document-viewer p {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+      .document-viewer ul, .document-viewer ol {
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="menu" class="navbar">
+      <a href="../index.html" class="bar">Home</a>
+      <a href="smart.html" class="bar">Smart Pencil Case</a>
+      <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+      <a href="poly.html" class="bar">Polygraph Device</a>
+      <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+      <a href="cib.html" class="bar">CIB Summer Program</a>
+      <a href="graduation.html" class="bar">Graduation Project</a>
+      <a href="ORP.html" class="bar">Operation Research Reports</a>
+      <a href="digital.html" class="bar">Software Testing Certificate</a>
+
+
+    </nav>
+    <br />
+<header>
+  <div class="container">
+    <h1>Operation Research Reports</h1>
+    
+    <a href="#download-section">
+      <img src="../images/or/opr.png" class="profile-image clickable-image" style="display: block; margin-left: auto; margin-right: auto;">
+    </a>
+
+    <p style="text-align: center; margin-top: 30px;">Read-only view of my operation research documents</p> 
+  </div>
+</header>
+
+    <main class="container">
+      <section class="content-container">
+        <h2 style="color: aliceblue;">Operation Research My Problem</h2>
+        <p style="color: aliceblue;">View the document below:</p>
+        <div id="doc1" class="document-viewer">Loading document...</div>
+      </section>
+
+      <section class="content-container">
+        <h2 style="color: aliceblue;">Operation Research Paper</h2>
+        <p style="color: aliceblue;">View the document below:</p>
+        <div id="doc2" class="document-viewer">Loading document...</div>
+      </section>
+
+      <section class="content-container text-center" id="download-section">
+        <h2 style="color: aliceblue;">Download Reports</h2>
+        <p style="color: aliceblue;">After reviewing the documents above, you can download the original Word files:</p>
+        <div style="margin-top: 20px;">
+          <a href="../documents/operation research/operation Research my problem.docx" download class="btn btn-primary mr-2">Download My Problem Report</a>
+          <a href="../documents/operation research/operation Research Paper.docx" download class="btn btn-primary">Download Research Paper</a>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/mammoth@1.4.21/mammoth.browser.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Load first document
+        fetch('../documents/operation research/operation Research my problem.docx')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.arrayBuffer();
+          })
+          .then(arrayBuffer => mammoth.convertToHtml({arrayBuffer: arrayBuffer}))
+          .then(result => {
+            document.getElementById('doc1').innerHTML = result.value;
+          })
+          .catch(err => {
+            document.getElementById('doc1').innerHTML = '<p style="color: red;">Error loading document: ' + err.message + '</p>';
+          });
+
+        // Load second document
+        fetch('../documents/operation research/operation Research Paper.docx')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.arrayBuffer();
+          })
+          .then(arrayBuffer => mammoth.convertToHtml({arrayBuffer: arrayBuffer}))
+          .then(result => {
+            document.getElementById('doc2').innerHTML = result.value;
+          })
+          .catch(err => {
+            document.getElementById('doc2').innerHTML = '<p style="color: red;">Error loading document: ' + err.message + '</p>';
+          });
+      });
+    </script>
+  </body>
+</html>

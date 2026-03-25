@@ -1,0 +1,69 @@
+ <script>
+
+      fetch('Pages/myprojects_nav.html')
+        .then(response => {
+          if (!response.ok) throw new Error("Navbar file not found");
+          return response.text(); 
+        })
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khaled Walid | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav id="menu">
+      <a href="index.html" class="bar">Home</a>
+      <a href="Pages/smart.html" class="bar">Smart Pencil Case</a>
+      <a href="Pages/unity2d.html" class="bar">Unity 2D Shooter</a>
+      <a href="Pages/poly.html" class="bar">Polygraph Device</a>
+      <a href="Pages/aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+      <a href="Pages/cib.html" class="bar">CIB Summer Program</a>
+      <a href="Pages/graduation.html" class="bar">Graduation Project</a>
+      <a href="Pages/ORP.html" class="bar">Operation Research Reports</a>
+    </nav>
+
+    <main class="homepage-main">
+    
+
+      <div class="hero-container">
+        <div class="profile-section">
+<div class="profile-image-wrapper">
+  <a href="documents/cvdocument/Khaled Walid Elharouny CV.pdf" download="Khaled_Walid_CV.pdf" style="text-decoration: none;">
+    <img src="images/homepage_images/picprofile.jpg" alt="Khaled Walid" class="profile-image" style="cursor: pointer;" />
+  </a>
+</div>
+
+          <div class="profile-content">
+            <p class="greeting">HELLO!</p>
+            <h1 class="name">I Am Khaled Walid</h1>
+            <div class="profile-details">
+              <p class="detail">Computer Science - Software Engineering Graduate</p>
+              <p class="detail">Passionate about Software Development and Innovation</p>
+              <p class="detail">Aspiring to create impactful software solutions</p>
+            </div>
+
+            <div class="cta-section">
+              <a href="documents/cvdocument/Khaled Walid Elharouny CV.pdf" download="Khaled_Walid_CV.pdf" class="btn btn-primary">
+                📄 Download My CV
+              </a>
+              
+              
+              <div id="header-placeholder"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+  </body>
+</html>

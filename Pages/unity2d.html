@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Khaled Walid | Unity Game Showcase</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="menu">
+      <a href="../index.html" class="bar">Home</a>
+      <a href="smart.html" class="bar">Smart Pencil Case</a>
+      <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+      <a href="poly.html" class="bar">Polygraph Device</a>
+      <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+      <a href="cib.html" class="bar">CIB Summer Program</a>
+      <a href="graduation.html" class="bar">Graduation Project</a>
+      <a href="ORP.html" class="bar">Operation Research Reports</a>
+      <a href="digital.html" class="bar">Software Testing Certificate</a>
+
+
+    </nav>
+
+    <div class="container">
+      <h1>Unity 2D Shooter Game</h1>
+
+      <!-- Video and Overlay Text -->
+      <div class="content-container">
+        <div class="card">
+          <h2>Jimmy's Journey – Unity Game</h2>
+
+          <video id="myVideo" autoplay muted loop playsinline>
+            <source
+              src="../videos/unity_topdown_view_2d_sooter_game/gamevid.mp4"
+              type="video/mp4"
+            />
+            <!-- unity topdown view 2d sooter game\gamevid.mp4 -->
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="text-center mt-3">
+            <button class="btn btn-secondary" onclick="toggleMute()">
+              🔇 Mute/Unmute
+            </button>
+            <button class="btn btn-primary" onclick="toggleText()">
+              👁️ Toggle Description
+            </button>
+          </div>
+
+          <div id="overlay-text" class="mt-3">
+            <p>
+              Jimmy's journey in the magical candy world is a colorful 2D
+              platformer that takes players through various challenging levels.
+            </p>
+            <p>
+              Every stage of the game reflects a different step in the
+              adventure, with unique enemies and obstacles to overcome.
+            </p>
+            <p>
+              This game is a perfect example of how entertainment and challenge
+              can be combined to create an engaging experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      function toggleMute() {
+        const video = document.getElementById("myVideo");
+        video.muted = !video.muted;
+      }
+
+      function toggleMuteGameplay() {
+        const video = document.getElementById("gameplayVideo");
+        video.muted = !video.muted;
+      }
+
+      function toggleText() {
+        const overlayText = document.getElementById("overlay-text");
+        overlayText.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>

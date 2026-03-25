@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Khaled Walid | Polygraph Machine Project</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark-bg">
+    <!-- Navigation -->
+    <nav id="menu">
+      <a href="../index.html" class="bar">Home</a>
+      <a href="smart.html" class="bar">Smart Pencil Case</a>
+      <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+      <a href="poly.html" class="bar">Polygraph Device</a>
+      <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+      <a href="cib.html" class="bar">CIB Summer Program</a>
+      <a href="graduation.html" class="bar">Graduation Project</a>
+      <a href="ORP.html" class="bar">Operation Research Reports</a>
+      <a href="digital.html" class="bar">Software Testing Certificate</a>
+
+
+    </nav>
+
+    <div class="container">
+      <h1>Polygraph Machine Project</h1>
+
+      <!-- Project Section -->
+      <div class="content-container">
+        <div class="text-center mb-4">
+          <img
+            src="../images/embeded_system/schema.jpg"
+            alt="Polygraph Machine Schema"
+            class="project-image"
+          />
+        </div>
+
+        <div class="card">
+          <h2>Polygraph Machine</h2>
+          <p>
+            <strong>Description:</strong> A polygraph machine built as a smart
+            circuit that monitors heartbeat fluctuations. It activates visual
+            and auditory indicators when changes occur.
+          </p>
+          <p>
+            The OLED display shows real-time BPM (Beats per Minute), and based
+            on the values:
+          </p>
+          <ul>
+            <li>If BPM > 100: buzzer sounds</li>
+            <li>Red LED lights up</li>
+            <li>White LED flashes at a frequency based on BPM</li>
+          </ul>
+          <p>
+            <strong>Usage:</strong> The user places a finger on the pulse
+            sensor. The readings are processed, and feedback is provided
+            visually and audibly depending on the BPM.
+          </p>
+        </div>
+
+        <!-- Toggle Image -->
+        <div class="card text-center">
+          <h3>Interactive Image</h3>
+          <p>Click the image to switch between external and internal views:</p>
+          <img
+            id="polyimg"
+            src="../images/embeded_system/polyoutside.jpg"
+            alt="Polygraph Machine"
+            style="cursor: pointer; max-width: 100%; height: auto"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const image = document.getElementById("polyimg");
+      const image1 = "../images/embeded_system/polyoutside.jpg";
+      const image2 = "../images/embeded_system/poly_inside.jpg";
+      let showingImage1 = true;
+      
+
+      image.addEventListener("click", () => {
+        image.src = showingImage1 ? image2 : image1;
+        showingImage1 = !showingImage1;
+      });
+    </script>
+  </body>
+</html>

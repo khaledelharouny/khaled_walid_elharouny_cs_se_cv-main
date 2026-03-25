@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Khaled Walid | AI Tic Tac Toe</title>
+    <link rel="stylesheet" href="../css/ai.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark-bg">
+    <nav id="menu">
+      <a href="../index.html" class="bar">Home</a>
+      <a href="smart.html" class="bar">Smart Pencil Case</a>
+      <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+      <a href="poly.html" class="bar">Polygraph Device</a>
+      <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+      <a href="cib.html" class="bar">CIB Summer Program</a>
+      <a href="graduation.html" class="bar">Graduation Project</a>
+      <a href="ORP.html" class="bar">Operation Research Reports</a>
+      <a href="digital.html" class="bar">Software Testing Certificate</a>
+
+
+    </nav>
+
+    <div class="container">
+      <h1>AI Tic Tac Toe Game</h1>
+
+      <div class="text-center mb-4">
+        <a href="../documents/ai_documents/ai_project.docx" download class="btn btn-success mr-2"
+          >Download Document</a
+        >
+        <a href="../documents/ai_documents/ai_project.pptx" download class="btn btn-secondary"
+          >Download PowerPoint</a
+        >
+      </div>
+
+      <div class="content-container">
+        <div class="text-center">
+          <!-- Video -->
+          <video id="ticVideo" autoplay loop muted playsinline>
+            <source src="../videos/AI/0707.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Button -->
+          <button id="toggleButton" class="btn mt-3">Show Description</button>
+
+          <!-- Description (hidden by default) -->
+          <div id="ticDescription" class="card hidden">
+            <h3>What is Tic Tac Toe?</h3>
+            <p>
+              Tic Tac Toe is a strategic 2-player game played on a 3×3 grid.
+              Players take turns marking X or O in empty squares. The first to
+              align 3 of their marks horizontally, vertically, or diagonally
+              wins. This version uses AI to play against you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+document.getElementById("toggleButton").addEventListener("click", function () {
+    const video = document.getElementById("ticVideo");
+    const desc = document.getElementById("ticDescription");
+
+    // Check if the video is currently displayed
+    const isVideoVisible = !video.classList.contains("hidden");
+
+    if (isVideoVisible) {
+        // Switch to Description
+        video.classList.add("hidden");
+        desc.classList.remove("hidden");
+        video.pause();
+        this.textContent = "Show Video";
+    } else {
+        // Switch to Video
+        video.classList.remove("hidden");
+        desc.classList.add("hidden");
+        video.play();
+        this.textContent = "Show Description";
+    }
+});
+    </script>
+  </body>
+</html>

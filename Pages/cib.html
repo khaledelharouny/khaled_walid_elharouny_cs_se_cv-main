@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Khaled Walid | CIB Summer Program</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="menu">
+      <a href="../index.html" class="bar">Home</a>
+      <a href="smart.html" class="bar">Smart Pencil Case</a>
+      <a href="unity2d.html" class="bar">Unity 2D Shooter</a>
+      <a href="poly.html" class="bar">Polygraph Device</a>
+      <a href="aitictactoe.html" class="bar">AI Tic Tac Toe</a>
+      <a href="cib.html" class="bar">CIB Summer Program</a>
+      <a href="graduation.html" class="bar">Graduation Project</a>
+      <a href="ORP.html" class="bar">Operation Research Reports</a>
+      <a href="digital.html" class="bar">Software Testing Certificate</a>
+
+
+    </nav>
+
+    <div class="container">
+   
+ 
+   <h1 style="color: rgb(7, 7, 7);">CIB Summer Program 2024</h1>
+           <div class="card">
+          <h3>Competition Video</h3>
+          <p style="color: blueviolet; font-size: medium; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">One of the videos I created for the competition:</p>
+
+          <video id="controls1" autoplay muted>
+            <source src="../videos/CIBVID/cibcompvideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="text-center mt-3">
+            <button class="btn btn-secondary" onclick="toggleMute()">
+              Toggle Mute/Unmute
+            </button>
+            <button class="btn btn-primary" id="playPauseButton" onclick="hi()">
+              Play
+            </button>
+          </div>
+        </div>
+
+      <div class="content-container">
+        <div class="text-center mb-4">
+   <h1 style="color: rgb(146, 194, 33);">View CIB Summer Program Below</h1>
+
+<div class="image-gallery">
+  <div class="image-item">
+    <img src="../images/CIB Images/sasc.png" alt="SAS Certificate" class="certificate-img" />
+
+    <div class="caption">CIB & SAS Data Literacy Certificate for completing the first milestone.</div>
+  </div>
+
+  <div class="image-item">
+    <img src="../images/CIB Images/linkc.png" alt="LinkedIn Certificate" class="certificate-img" />
+  
+    <div class="caption">LinkedIn Learning & CIB Certificate for passing the second week requirements.</div>
+  </div>
+</div>
+   
+
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01" />
+  <div id="caption"></div>
+</div>
+      </div>
+
+        <div class="card">
+          <p>
+            <strong class="stri">Completion Email</strong><br /><br />
+            Congratulations on your participation in CIB Summer Program 2024.<br /><br />
+            We are glad to have had you on board this journey and hope this
+            year's content was of great benefit to you.<br /><br />
+            Attached below are your certificates for passing the second week
+            (LinkedIn and CIB).<br />
+            You have now obtained your first and second certificates.<br /><br />
+            Don't forget to share this milestone with your friends, family, and
+            LinkedIn network.<br /><br />
+            <strong class="stri">Khaled's Experience</strong><br />
+            I have been proud to be a part of the CIB Summer Program. We learned
+            about data literacy, CV importance, risk management, and how to
+            start your own business.<br /><br />
+            It was an engaging journey full of competitions. Even though the
+            program wasn't directly related to my field, I truly enjoyed the
+            experience.
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+
+    <script>
+      function toggleMute() {
+        var video = document.getElementById("controls1");
+        video.muted = !video.muted;
+      }
+
+      function hi() {
+        const video = document.getElementById("controls1");
+        const button = document.getElementById("playPauseButton");
+        if (video.paused) {
+          video.play();
+          button.textContent = "Pause";
+        } else {
+          video.pause();
+          button.textContent = "Play";
+        }
+      }
+    </script>
+    <script>
+  // --- 1. VIDEO CONTROLS ---
+  function toggleMute() {
+    var video = document.getElementById("controls1");
+    video.muted = !video.muted;
+  }
+
+  function hi() {
+    const video = document.getElementById("controls1");
+    const button = document.getElementById("playPauseButton");
+    if (video.paused) {
+      video.play();
+      button.textContent = "Pause";
+    } else {
+      video.pause();
+      button.textContent = "Play";
+    }
+  }
+
+  // --- 2. MODAL / POPUP LOGIC ---
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("img01");
+  var modalCaption = document.getElementById("caption");
+  var closeSpan = document.getElementsByClassName("close")[0];
+
+  document.querySelectorAll(".image-item img").forEach(function(img) {
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      var captionDiv = this.parentElement.querySelector(".caption");
+      modalCaption.innerHTML = captionDiv ? captionDiv.innerHTML : this.alt;
+    }
+  });
+
+  closeSpan.onclick = function() { modal.style.display = "none"; }
+  window.onclick = function(event) {
+    if (event.target == modal) modal.style.display = "none";
+  }
+
+
+</script>
+  </body>
+</html>
